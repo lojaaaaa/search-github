@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 import { favoriteStore } from "@/entities/favorite-repository";
 import { IRepository } from "@/entities/repository"
-import { Button, BranchIcon, LikeIcon, ShareIcon, StarIcon } from "@/shared/ui";
+import { Button, BranchIcon, LikeIcon, StarIcon } from "@/shared/ui";
+import { CopyToClipboardButton } from "@/features/copy-to-clipboard";
 
 interface RepositoryItemProps {
   item: IRepository;
@@ -53,9 +54,7 @@ export const RepositoryItem = observer(({ item }: RepositoryItemProps) => {
           <Button icon onClick={handleAddFavoriteClick}>
             <LikeIcon isLiked={isFavorite} />
           </Button>
-          <Button icon>
-            <ShareIcon />
-          </Button>
+          <CopyToClipboardButton textToCopy={item.html_url} /> 
         </div>
         <Link to={`/repo/${item.id}`}>
           <Button>

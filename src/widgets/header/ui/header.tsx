@@ -1,8 +1,8 @@
-import { observer } from 'mobx-react-lite'
-import { NavLink } from 'react-router-dom'
+import { observer } from 'mobx-react-lite';
+import { NavLink } from 'react-router-dom';
 
-import { favoriteStore } from '@/entities/favorite-repository/model/store'
-import { LikeIcon } from '@/shared/ui/icons'
+import { favoriteStore } from '@/entities/favorite-repository';
+import { LikeIcon } from '@/shared/ui';
 
 export const Header = observer(() => (
   <header className='bg-baseHeader text-baseTextHeader'>

@@ -5,7 +5,6 @@ import { Home } from '@/pages/home';
 import { RepositoryDetails } from '@/pages/repository';
 import { Header } from '@/widgets/header';
 
-
 const MainLayout = () => (
   <>
     <div className="h-full">

@@ -1,4 +1,4 @@
-import { IRepository } from "@/entities/repository/model/types";
+import { IRepository } from "@/entities/repository";
 import { makeAutoObservable } from "mobx";
 
 class FavoriteStore {

@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import { favoriteStore } from '@/entities/favorite-repository';
 import { repositoryStore } from '@/entities/repository';
+import { CopyToClipboardButton } from '@/features/copy-to-clipboard';
 import { formatDate } from '@/shared/lib';
 import { 
   Button, 
@@ -14,7 +15,6 @@ import {
   EditIcon, 
   FolderIcon, 
   LikeIcon, 
-  ShareIcon, 
   StarIcon
 } from '@/shared/ui';
 
@@ -86,9 +86,7 @@ export const RepositoryDetails = observer(() => {
 
       <div className='flex justify-between items-center'>
         <div className='flex gap-4'>
-          <Button icon>
-            <ShareIcon />
-          </Button>
+          <CopyToClipboardButton textToCopy={repository.html_url} /> 
           <Button icon onClick={handleAddFavoriteClick}>
             <LikeIcon isLiked={favoriteStore.isFavorite(Number(repository.id))} />
           </Button>
