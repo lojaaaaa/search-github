@@ -19,7 +19,6 @@ export const RepositoryItem = observer(({ item }: RepositoryItemProps) => {
     if (isFavorite) {
       favoriteStore.removeFavorite(item.id);
       setIsFavorite(false);
-      console.log('delete')
     } else {
       favoriteStore.addFavorite(item);
       setIsFavorite(true);
